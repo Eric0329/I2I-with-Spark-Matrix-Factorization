@@ -1,21 +1,12 @@
 ## U2I Matrix
 * Raw weblog.
-```
-  (u1, i1)
-  (u1, i4)
-  (u1, i4)
-  (u2, i3)
-  (u2, i4)
-  (u2, i4)
-  (u2, i5)
-  (u3, i2)
-  (u3, i4)
-  (u3, i5)
-```
+
+  ($u_1$, $i_1$), ($u_1$, $i_4$), ($u_1$, $i_4$), ($u_2$, $i_3$), ($u_2$, $i_5$), ($u_3$, $i_2$)
 
 * User-item matrix **R**, which is derived from the raw log.
 
-  ![image](https://github.com/user-attachments/assets/5071ee4c-ae3a-489c-ac2c-3454321beab9)
+  ![image](https://github.com/user-attachments/assets/5e554a55-913a-4ae9-87c1-07e4de727171)
+
 
 ## I2I Matrix
 * Item-item co-occurrence matrix is calculated from matrix transpose * itself.
