@@ -32,7 +32,7 @@
 #### [Algorithm - Spark ALS](https://spark.apache.org/docs/latest/mllib-collaborative-filtering.html)
 For more detail, you are highly recommended to read the the article [Matrix Factorization Techniques for Recommender Systems (MFTRS)](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf). And all equations that are described here also refers from MFTRS.
 
-![](http://latex.codecogs.com/png.latex?%5Cmin_%7Bp%5E*%2Cq%5E*%7D%5Csum_%7B%28u%2Ci%29%5Cin%20k%7D%28r_%7Bui%7D-%5Chat%7Br%7D_%7Bui%7D%29%5E2&plus;%5Clambda%20%28%5Cleft%5C%7C%20p_u%20%5Cright%5C%7C%5E2&plus;%5Cleft%5C%7C%20q_i%20%5Cright%5C%7C%5E2%29)
+![image](https://github.com/user-attachments/assets/5d817257-e843-4e28-842e-c4b38c648a8f)
 
 where,
 
