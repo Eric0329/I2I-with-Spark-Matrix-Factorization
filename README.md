@@ -76,7 +76,9 @@ val model = new ALS()
   * [MinMaxScaler](https://spark.apache.org/docs/latest/ml-features.html#minmaxscaler), [0, 1]
 
 ## [Experimental Result](https://docs.google.com/spreadsheets/d/13mQ4leXf2mS52EcTPrnMedPLN6KlBSYgmkq5-etm064/edit#gid=525028610)
-![](https://drive.google.com/uc?id=0B78KhWqVkVmtcWlBaVI3Zk5CdFU)
+
+![image](https://github.com/user-attachments/assets/d2cd679c-8af3-405a-87ae-5bb279977fa5)
+
 According experiments, implicit preference with standard unit deviation normalization training data under higher rank, higher alpha and low lambda always get the better result.
 
 There is an interesting observation from our experiments. 
