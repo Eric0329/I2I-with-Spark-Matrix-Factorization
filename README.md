@@ -32,21 +32,21 @@
 #### [Algorithm - Spark ALS](https://spark.apache.org/docs/latest/mllib-collaborative-filtering.html)
 For more detail, you are highly recommended to read the the article [Matrix Factorization Techniques for Recommender Systems (MFTRS)](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf). And all equations that are described here also refers from MFTRS.
 
-![image](https://github.com/user-attachments/assets/5d817257-e843-4e28-842e-c4b38c648a8f)
+![image](https://github.com/user-attachments/assets/155ce7d5-ce9f-4853-95d9-c3a75df05b02)
 
 where,
 
 $K$ is the set of all training $(u,i)$ pairs.
 
-![](http://latex.codecogs.com/png.latex?r_%7Bui%7D) is the known rating from training data.
+$r_{ui}$ is the known rating from training data.
 
-![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D%3Dp_u%5ETq_i).
+$\hat{r_{ui}} = p^T_uq_i$
 
-![](https://latex.codecogs.com/gif.latex?p_u) is an user latent vector, in our case, we could thought as ![](https://latex.codecogs.com/gif.latex?p_i).
+$p_u$ is an user latent vector, in our case, we could thought as $p_i$.
 
-![](https://latex.codecogs.com/gif.latex?q_i) is an item latent vector, in our case, we could thoght as ![](https://latex.codecogs.com/gif.latex?p_%7Bi%5E%27%7D).
+$q_i$ is an item latent vector, in our case, we could thoght as $p^T_i$.
 
-Considers the confidence level ![](http://latex.codecogs.com/png.latex?c_%7Bui%7D) of the implicit feedback and refines ![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D) by adding biases ![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D%3D%5Cmu%20&plus;%20b_i%20&plus;%20b_u%20&plus;%20p_u%5ET%20q_i), we could get the final equation as below.
+Considers the confidence level $c_{ui}$ of the implicit feedback and refines ![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D) by adding biases ![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D%3D%5Cmu%20&plus;%20b_i%20&plus;%20b_u%20&plus;%20p_u%5ET%20q_i), we could get the final equation as below.
 
 ![](https://latex.codecogs.com/png.latex?%5Cmin_%7Bp%5E*%2Cq%5E*%2Cb%5E*%7D%5Csum_%7B%28u%2Ci%29%5Cin%20k%7Dc_%7Bui%7D%28r_%7Bui%7D-u-b_u-b_i-p_u%5ETq_i%29%5E2&plus;%5Clambda%20%28%5Cleft%5C%7C%20p_u%20%5Cright%5C%7C%5E2&plus;%5Cleft%5C%7C%20q_i%20%5Cright%5C%7C%5E2%20&plus;%20b_u%5E2%20&plus;%20b_i%5E2%29)
 
