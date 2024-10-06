@@ -64,7 +64,7 @@ val model = new ALS()
 ```
 * [Parameters](https://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.mllib.recommendation.ALS)
   * **implicitPrefs** -> `true` to use implicit preference
-  * **rank**  - `> 100` with the better result 
+  * **rank**  - `> 100` with the better result (the number of features to use)
   * **alpha** - `> 1, [1, 1e1, 1e2, 1e3, 1e4]`
   * lambda - `[1e-3, 1e-2, 1e-1, 1, 2]`, the regularization parameter
     * the higher the lambda, the lower the over-fitting but the lose accuracy (greater the bias).
