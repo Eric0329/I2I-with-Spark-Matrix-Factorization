@@ -19,9 +19,9 @@
 
 #### Why we needs Matrix Factorization?
 * Most of similarity based methods are filters, e.g. association rule, LLR, cosine similarity, and etc., which filter out unqualified items from the co-occurrence list.  
-  e.g. $i_1$ => [$i_4$] or none, $i_3$ => [$i_5$], or none
+  e.g. $i_1$ => $[i_4]$ or none, $i_3$ => $[i_5]$, or none
 * In matrix factorization, item-item similarity can be generated even they aren't co-occurrence in training set. i.e. infer other indicators from few observation.  
-  e.g. i1 => [i2, i3] or [i5]
+  e.g. $i_1$ => $[i_2, i_3, i_5]$
 
 #### Input 
 * Item-item co-occurrence matrix (i2i_rating) with either standard unit deviation or min-max normalization.
