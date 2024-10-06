@@ -5,8 +5,7 @@
 
 * User-item matrix **R**, which is derived from the raw log.
 
-  ![image](https://github.com/user-attachments/assets/5e554a55-913a-4ae9-87c1-07e4de727171)
-
+  ![image](https://github.com/user-attachments/assets/b3ead729-4285-4237-9be2-b9dd4ae9c321)
 
 ## I2I Matrix
 * Item-item co-occurrence matrix is calculated from matrix transpose * itself.
