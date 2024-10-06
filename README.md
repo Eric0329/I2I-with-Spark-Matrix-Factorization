@@ -36,7 +36,7 @@ For more detail, you are highly recommended to read the the article [Matrix Fact
 
 where,
 
-![](http://latex.codecogs.com/png.latex?k) is the set of all training ![](https://latex.codecogs.com/gif.latex?%28u%2Ci%29) pairs.
+$K$ is the set of all training $(u,i)$ pairs.
 
 ![](http://latex.codecogs.com/png.latex?r_%7Bui%7D) is the known rating from training data.
 
