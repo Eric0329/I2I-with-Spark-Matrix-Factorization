@@ -30,9 +30,10 @@
 * training set = testing set, for validation conveniently.
 
 #### [Algorithm - Spark ALS](https://spark.apache.org/docs/latest/mllib-collaborative-filtering.html)
-For more detail, you are highly recommended to read the the article [Matrix Factorization Techniques for Recommender Systems (MFTRS)](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf). And all equations that are described here also refers from MFTRS.
+For more detail, you are highly recommended to read the the article [Matrix Factorization Techniques for Recommender Systems (MFTRS)](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf). 
+And all equations that are described here also refers from MFTRS.
 
-![image](https://github.com/user-attachments/assets/155ce7d5-ce9f-4853-95d9-c3a75df05b02)
+$\min_{q^\ast,p^\ast}\sum_{(u,i) \in K}(r_{ui}-\hat{r}_{ui})^2 + \lambda{(\left\| q_i \right\|^2 + \left\| p_u \right\|^2)}$
 
 where,
 
@@ -40,15 +41,17 @@ $K$ is the set of all training $(u,i)$ pairs.
 
 $r_{ui}$ is the known rating from training data.
 
-$\hat{r_{ui}} = p^T_uq_i$
+$\hat{r_{ui}} = q_i^T p_u$
 
-$p_u$ is an user latent vector, in our case, we could thought as $p_i$.
+$q_i$ is an item latent vector
 
-$q_i$ is an item latent vector, in our case, we could thoght as $p^T_i$.
+$p_u$ is an user latent vector, in our case, we could thought it same as $q_i$.
 
-Considers the confidence level $c_{ui}$ of the implicit feedback and refines ![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D) by adding biases ![](http://latex.codecogs.com/png.latex?%5Chat%7Br_%7Bui%7D%7D%3D%5Cmu%20&plus;%20b_i%20&plus;%20b_u%20&plus;%20p_u%5ET%20q_i), we could get the final equation as below.
+Considers the confidence level $c_{ui}$ of the implicit feedback and refines $r^T_{ui}$ by adding biases $\hat{r_{ui}}=\mu &plus; b_i &plus; b_u &plus; q_i^Tp_u $, 
 
-![](https://latex.codecogs.com/png.latex?%5Cmin_%7Bp%5E*%2Cq%5E*%2Cb%5E*%7D%5Csum_%7B%28u%2Ci%29%5Cin%20k%7Dc_%7Bui%7D%28r_%7Bui%7D-u-b_u-b_i-p_u%5ETq_i%29%5E2&plus;%5Clambda%20%28%5Cleft%5C%7C%20p_u%20%5Cright%5C%7C%5E2&plus;%5Cleft%5C%7C%20q_i%20%5Cright%5C%7C%5E2%20&plus;%20b_u%5E2%20&plus;%20b_i%5E2%29)
+we could get the final equation as below.
+
+$\min_{p^\ast,q^\ast,b^\ast}\sum_{(u,i)\in k}c_{ui}(r_{ui}-u-b_u-b_i-p_u^Tq_i)^2 + \lambda (\left\| p_u \right\|^2 + \left\| q_i \right\|^2 + b_u^2 + b_i^2)$
 
 ```
 val model = new ALS()
