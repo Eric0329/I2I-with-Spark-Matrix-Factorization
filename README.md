@@ -79,7 +79,7 @@ val model = new ALS()
 
 ![image](https://github.com/user-attachments/assets/d2cd679c-8af3-405a-87ae-5bb279977fa5)
 
-According experiments, implicit preference with standard unit deviation normalization training data under higher rank, higher alpha and low lambda always get the better result.
+According experiments, implicit preference with standard unit deviation normalization training data under higher rank, slightly higher alpha and low lambda always get the better result.
 
 There is an interesting observation from our experiments. 
 The lowest RMSE doesn't always stand for best recommendation list.
