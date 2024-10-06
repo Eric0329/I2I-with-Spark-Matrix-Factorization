@@ -15,17 +15,18 @@
 
 * User-item matrix **R**, which is derived from the raw log.
 
-![](https://drive.google.com/uc?id=0B78KhWqVkVmtS3FRQ0RxTlo5YTg)
+  ![image](https://github.com/user-attachments/assets/5071ee4c-ae3a-489c-ac2c-3454321beab9)
 
 ## I2I Matrix
 * Item-item co-occurrence matrix is calculated from matrix transpose * itself.
 * I2I matrix (i2i_rating) is also able to be computed by self-join SQL.
 
-![](https://drive.google.com/uc?id=0B78KhWqVkVmtSHM5YjJkLWxHc2c)
+  ![image](https://github.com/user-attachments/assets/8fc52831-b263-4580-ba83-d8098a830cfe)
+
 
 ## Matrix Factorization
 #### Concept
-![](https://drive.google.com/uc?id=0B78KhWqVkVmtRDZVU18xal9GTG8)
+![image](https://github.com/user-attachments/assets/8b754cc6-6f2f-4d38-8081-d19a1ac2ce82)
 
 #### Why we needs Matrix Factorization?
 * Most of similarity based methods are filters, e.g. association rule, LLR, cosine similarity, and etc., which filter out unqualified items from the co-occurrence list.  
