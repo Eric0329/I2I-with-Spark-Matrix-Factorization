@@ -1,4 +1,4 @@
-## U2I Matrix
+![image](https://github.com/user-attachments/assets/1c02b9dd-3fae-40bd-af91-3485b28c3ee2)## U2I Matrix
 * Raw weblog.
 
   ($u_1$, $i_1$), ($u_1$, $i_4$), ($u_1$, $i_4$), ($u_2$, $i_3$), ($u_2$, $i_5$), ($u_3$, $i_2$)
@@ -15,7 +15,7 @@
 
 ## Matrix Factorization
 #### Concept
-![image](https://github.com/user-attachments/assets/8b754cc6-6f2f-4d38-8081-d19a1ac2ce82)
+![image](https://github.com/user-attachments/assets/d9818801-4236-49f4-a9e1-dff40d24cc5e)
 
 #### Why we needs Matrix Factorization?
 * Most of similarity based methods are filters, e.g. association rule, LLR, cosine similarity, and etc., which filter out unqualified items from the co-occurrence list.  
